@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*E utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights)*/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Open Sans', "Roboto",sans-serif;
+    
+}
+
+header#cabecalho{
+    background: linear-gradient(135deg, #05e3e7 30%, #132a5a);
+    padding: 20px 0;/*em cima e baixo*/
+    
+    height: 90px;
+}
+
+.center{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+article#slader .center{
+    padding: 0 !important;
+}
+
+header#cabecalho .logo{
+    position: absolute;
+    top: 5px;
+    z-index: 999;
+    
+}
+
+
+/*Formatação do Menu*/
+.menu .button-bar{
+    position: absolute;
+    right: 5px;
+    top: -22px;
+    color: #00006a;
+    font-size: 3.5rem;
+    display: none;
+}
+nav.menu #check{
+    display: none;
+}
+
+nav.menu{
+    position: relative;
+    width: 100%;
+    top: 25px;
+}
+nav.menu ul{
+    list-style: none; /*tirar os ciclos da ul*/
+    display: flex; /*o flex por padrão e row*/
+    justify-content: flex-end; /*ficar para esquerda*/
+    flex-direction: row; /*pra ficar em linha*/
+    flex-wrap: nowrap;
+    align-items: center;
+}
+nav.menu ul a{
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    font-size: 15px;
+    font-style: bold;
+    text-decoration: none; /*para eliminar o subrinhado*/
+    text-shadow: 10px 11px 11px rgba(0, 0, 0, .5);
+    padding: 7px 3px;
+    margin-right: 30px;
+    transition: 0.1s;
+}
+nav.menu a.menu-active{
+    border-bottom: 4px solid #010a1b;
+  }
+
+nav.menu a:hover, nav.menu a.menu-active:hover{
+    color:#050536;
+    transition: 0.2s;
+}
+
+/*Formatação do Sobre*/
+section#sobre{
+    padding: 40px 0;
+    background: white;
+
+}
+section#sobre .center{
+    flex-wrap: wrap;
+}
+.chamada-sobre{
+    width: 100%;
+    text-align: center;
+}
+.chamada-sobre h2{
+    color: #042869;
+    text-transform: uppercase;/*Por letra maiscula*/
+}
+
+.conteudo-sobre{
+    margin: 30px 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    flex-wrap: nowrap;
+}
+.conteudo-sobre img{width: 45%; margin-left: 100px;max-width: 100%;}
+.conteudo-sobre .conteudo{
+    width: 50%;
+    padding-left: 20px;
+}
+.conteudo-sobre .conteudo p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    color: #292a2d;
+    font-size: 14px;
+    width: 80%;
+    line-height: 25px;
+    
+}
+
+
+section#sobre .btn-sobre{
+    background: white;  
+    border: 2px solid #042569;
+    color: #042569;
+    padding: 10px;
+    margin: 7px 0 ;
+    font-size: 14px;
+    transition: 0.4s;
+}
+section#sobre .btn-sobre:hover{
+    background-color: #123265;
+    color: white;
+}
+
+/*Formatação de Noticias*/
+section#noticias{
+    background-image: url("../../_img/fundo1.jpg");
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 60px 0;
+}
+
+section#noticias .center{
+    flex-wrap: wrap;
+}
+.chamada-noticia{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.chamada-noticia h2{
+    color: white;
+    text-transform: uppercase;
+}
+
+.chamada-noticia  p{
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 0;
+    color: white;
+}
+
+/*Formatação do carrousel*/
+
+.carrousel{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+.carrousel-single{
+  background-color: white;
+  width: 23%;
+  margin-right: 13px;
+  padding: 40px 30px;
+  transition: 0.8s;
+}
+
+.carrousel-single:hover{
+    box-shadow: 0px 0px 15px 4px rgb(255, 255, 255);
+}
+
+.carrousel-single svg{ /*Para o icone*/
+    color: #123265;
+    font-size: 30px;
+}
+.carrousel-single h2{
+    color: #123265;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.carrousel-single p{
+    font-family: 'Open Sans', sans-serif;
+    color: #292a2d;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 25px;
+}
+.btn-carrousel{
+    background-color: white;
+    border: 2px solid #123265;
+    color: #042569;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.btn-carrousel:hover{
+    background-color: #123265;
+    color: white;
+}
+
+/*Formatação do Rodape*/
+footer#rodape{
+  background: linear-gradient(135deg, #03f8fc 30%, #3183ba);
+  padding-bottom: 100px;
+}
+footer#rodape .center{
+    flex-wrap: wrap;
+}
+footer#rodape .chamada-rede{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+footer#rodape .rodepe-sobre{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+footer#rodape .chamada-rede svg{
+  color: #000049;
+  font-size: 38px;
+  margin-right: 1.2%;
+}
+.footer-servico, .footer-contacto{
+  margin: 0 80px;
+}
+
+footer#rodape h2{
+  color: #000049;
+}
+footer#rodape ul{
+  list-style: none;
+  color: #35363a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+footer#rodape ul span{color: #000049;}
+.footer-contacto button{
+    background-color: #19c1dd;
+    border: 2px solid #000049;
+    color: #000049;
+    margin-top: 10px;
+    padding: 5px 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.footer-contacto button:hover{
+    background-color: #123265;
+    color: white;
+}
+
+/*Formatação de Reponsive*/
+@media screen and (max-width: 768px){
+    nav.menu ul{
+        transition: all .5s;
+        background: linear-gradient(135deg, #03f8fc 30%, #3183ba);
+        position: absolute;
+        top: -1000px;
+        right: -15px !important;
+        width: 300px;
+        display: block !important;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        border-right: 6px solid #042569;
+        border-left: 6px solid #042569;
+        border-bottom: 6px solid #042569;
+        z-index: 99;
+
+    }
+    nav.menu ul a{
+        transition: all 1s;
+        color: white;
+        text-align: center;
+        width: 100%;
+        display: block !important;
+    }
+
+    nav.menu ul li a:hover{
+        background-color: rgba(0, 128, 128, .1);
+    }
+    nav.menu .button-bar{
+        display: block;
+    }
+
+    nav.menu #check:checked ~ ul{ top: 40px !important;}
+}

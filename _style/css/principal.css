@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 body{
-    font-family:  'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: justify;
 }
 
 p{
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: rgb(23, 56, 105);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 400;
     letter-spacing: 0.2px;
@@ -22,7 +22,6 @@ p{
 
 header#cabecalho{
     background: linear-gradient(135deg, #03f8fc 30%, #3183ba);
-    border-bottom: 7px solid #042569;
     height: 100px;
     width: 100%;
 }
